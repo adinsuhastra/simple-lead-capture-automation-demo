@@ -1,0 +1,6 @@
+company,contact_name,email,need,budget,urgency,fit,source
+Northstar Studio,Maya,maya@northstar.example,Landing page cleanup and lead form routing,1200,high,strong,Website form
+Cedar Books,Rafi,rafi@cedarbooks.example,Spreadsheet cleanup for supplier list,350,medium,strong,CSV import
+Blue Harbor Cafe,Lina,,New booking automation idea,450,low,medium,Manual entry
+Pixel Lane,Andre,andre@pixellane.example,Workflow automation audit,900,high,medium,Website form
+Green Desk Admin,Sari,sari@greendesk.example,Research list formatting,220,medium,low,CSV import
