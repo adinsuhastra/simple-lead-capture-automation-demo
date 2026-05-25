@@ -1,0 +1,42 @@
+{
+  "demo": "Simple Lead Capture Automation Demo",
+  "generated_locally": true,
+  "contains_real_personal_data": false,
+  "leads": [
+    {
+      "company": "Northstar Studio",
+      "score": 100,
+      "category": "Hot",
+      "validation": "complete",
+      "recommended_next_action": "Human review, then send a short follow-up."
+    },
+    {
+      "company": "Cedar Books",
+      "score": 68,
+      "category": "Warm",
+      "validation": "complete",
+      "recommended_next_action": "Review budget and scope before follow-up."
+    },
+    {
+      "company": "Blue Harbor Cafe",
+      "score": 48,
+      "category": "Cold",
+      "validation": "needs review: email",
+      "recommended_next_action": "Hold or request clearer details."
+    },
+    {
+      "company": "Pixel Lane",
+      "score": 80,
+      "category": "Hot",
+      "validation": "complete",
+      "recommended_next_action": "Human review, then send a short follow-up."
+    },
+    {
+      "company": "Green Desk Admin",
+      "score": 48,
+      "category": "Cold",
+      "validation": "complete",
+      "recommended_next_action": "Hold or request clearer details."
+    }
+  ]
+}
