@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Lead Capture Automation Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Simple Lead Capture Automation Demo home">
+      <span class="brand-mark">LC</span>
+      <span>Lead Capture Demo</span>
+    </a>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="#workflow">Workflow</a>
+      <a href="#leads">Leads</a>
+      <a href="#output">Output</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Fictional automation portfolio demo</p>
+        <h1>Simple lead capture, scoring, and follow-up workflow.</h1>
+        <p class="hero-text">
+          This local demo simulates how a small business lead intake process can be validated,
+          scored, categorized, and prepared for human-reviewed follow-up without scraping,
+          external APIs, or real personal data.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-action" id="runScoringButton" type="button">Run mock scoring</button>
+          <a class="secondary-action" href="#output">View output</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Demo safeguards">
+        <h2>Demo safeguards</h2>
+        <ul>
+          <li>All leads are fictional sample records.</li>
+          <li>No scraping, API calls, tracking, or backend services.</li>
+          <li>Follow-up drafts require human approval before use.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">Workflow map</p>
+        <h2>Automation steps</h2>
+      </div>
+
+      <div class="workflow-grid" aria-label="Lead automation workflow steps">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Lead Intake</h3>
+          <p>Start with a sample form or CSV-style lead record.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Validation</h3>
+          <p>Check required fields and flag incomplete records.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>Scoring</h3>
+          <p>Assign points based on budget, urgency, fit, and contact quality.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">04</span>
+          <h3>Categorization</h3>
+          <p>Group leads into Hot, Warm, or Cold follow-up queues.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">05</span>
+          <h3>Draft Message</h3>
+          <p>Create a concise follow-up draft for human review.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">06</span>
+          <h3>Report</h3>
+          <p>Export a summary that explains score, category, and next action.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="leads">
+      <div>
+        <p class="eyebrow">Sample input</p>
+        <h2>Fictional leads</h2>
+        <p class="section-copy">
+          The table below mirrors the structure of a lightweight intake sheet. The scoring button
+          runs deterministic local logic in JavaScript so the workflow can be reviewed without any
+          private data or outside services.
+        </p>
+      </div>
+
+      <div class="table-wrap" aria-live="polite">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Need</th>
+              <th>Budget</th>
+              <th>Urgency</th>
+              <th>Fit</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="leadTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section output-section" id="output">
+      <div class="section-heading">
+        <p class="eyebrow">Mock output</p>
+        <h2>Scoring summary</h2>
+      </div>
+
+      <div class="output-layout">
+        <article class="summary-panel">
+          <h3>Pipeline totals</h3>
+          <div class="summary-grid">
+            <div>
+              <span class="summary-value" id="totalLeads">0</span>
+              <span class="summary-label">Total leads</span>
+            </div>
+            <div>
+              <span class="summary-value hot" id="hotLeads">0</span>
+              <span class="summary-label">Hot</span>
+            </div>
+            <div>
+              <span class="summary-value warm" id="warmLeads">0</span>
+              <span class="summary-label">Warm</span>
+            </div>
+            <div>
+              <span class="summary-value cold" id="coldLeads">0</span>
+              <span class="summary-label">Cold</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="message-panel">
+          <div class="panel-title-row">
+            <h3>Follow-up draft preview</h3>
+            <button class="text-button" id="copyDraftButton" type="button">Copy draft</button>
+          </div>
+          <p id="followUpDraft" class="draft-text">
+            Run mock scoring to generate a human-reviewed follow-up draft for the strongest sample lead.
+          </p>
+          <p class="small-note" id="copyStatus" aria-live="polite"></p>
+        </article>
+      </div>
+
+      <div class="export-panel">
+        <div class="panel-title-row">
+          <h3>Exportable summary</h3>
+          <button class="text-button" id="downloadSummaryButton" type="button">Download JSON</button>
+        </div>
+        <pre id="jsonPreview" tabindex="0">{ "status": "Run mock scoring to generate output." }</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>This is a self-made AI-assisted portfolio demo. It is not client work and does not process real leads.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
